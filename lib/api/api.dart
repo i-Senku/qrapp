@@ -15,7 +15,7 @@ class MyApi{
     };
 
     var response = await http.post(url,body: jsonEncode(data));
-    print("Response : ${response.body}");
+    print("Response : ${jsonDecode(response.body)}");
 
     return response.statusCode == 200 ? true : false;
 

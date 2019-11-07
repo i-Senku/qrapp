@@ -6,6 +6,14 @@ class DataState with ChangeNotifier{
   String _soyad;
   String _tel;
   String _mail;
+  String _id;
+
+  String get id => _id;
+
+  set id(String value) {
+    _id= value;
+    notifyListeners();
+  }
 
   String get isim => _isim;
 
